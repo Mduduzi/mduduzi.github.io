@@ -37,6 +37,21 @@ body, html {
   height: 100%;
 }
 
+.clocks {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.clocks-container {
+  justify-content: center;
+  align-items: center;
+}
+
+.analog-clock {
+  margin-left: 17pt;
+}
+
 #Home {background-color: #42515f;}
 #News {background-color: green;}
 #Contact {background-color: blue;}
@@ -58,12 +73,27 @@ body, html {
 <div id="News" class="tabcontent">
   <h3>News</h3>
   <p>Some news this fine day!</p>
-  <p>
-    <iframe scrolling="no" frameborder="no" clocktype="html5" style="overflow:hidden;border:0;margin:0;padding:0;width:350px;height:350px;"src="https://www.clocklink.com/html5embed.php?clock=041&timezone=SouthAfrica_Johannesburg&color=green&size=350&Title=&Message=&Target=&From=2020,1,1,0,0,0&Color=green"></iframe>
-    <iframe scrolling="no" frameborder="no" clocktype="html5" style="overflow:hidden;border:0;margin:0;padding:0;width:350px;height:350px;"src="https://www.clocklink.com/html5embed.php?clock=041&timezone=UnitedKingdom_London&color=green&size=350&Title=&Message=&Target=&From=2020,1,1,0,0,0&Color=green"></iframe>
-    <iframe scrolling="no" frameborder="no" clocktype="html5" style="overflow:hidden;border:0;margin:0;padding:0;width:350px;height:350px;"src="https://www.clocklink.com/html5embed.php?clock=041&timezone=USA_NewYork&color=green&size=350&Title=&Message=&Target=&From=2020,1,1,0,0,0&Color=green"></iframe>
-  </p>
-  <p>Lala</p>
+
+  <div id="Clocks" class="clocks">
+    <div id="Johannesburg" class="clocks-container">  
+      <script async defer id='2020122113539523' src='https://widgets.worldtimeserver.com/Public.ashx?rid=2020122113539523&theme=Analog&action=clock&wtsid=ZA&hex=5a6ead&city=Johannesburg&size=large'></script>
+      <br>
+      <div class="analog-clock"><script async defer id='202012211467984' src='https://widgets.worldtimeserver.com/Public.ashx?rid=202012211467984&theme=Digital&action=clock&wtsid=ZA&hex=5a6ead&city=Cape Town&size=large'></script></div>
+    </div>
+    <div id="London" class="clocks-container">
+      <script async defer id='20201221141048802' src='https://widgets.worldtimeserver.com/Public.ashx?rid=20201221141048802&theme=Analog&action=clock&wtsid=GB&hex=5a6ead&city=London&size=large'></script>
+      <br>
+      <div class="analog-clock"><script async defer id='202012211485585' src='https://widgets.worldtimeserver.com/Public.ashx?rid=202012211485585&theme=Digital&action=clock&wtsid=GB&hex=5a6ead&city=London&size=large'></script></div>
+    </div>
+    <div id="NewYork" class="clocks-container">
+      <script async defer id='20201221142726323' src='https://widgets.worldtimeserver.com/Public.ashx?rid=20201221142726323&theme=Analog&action=clock&wtsid=US-NY&hex=5a6ead&city=New York&size=large'></script>
+      <br>
+      <div class="analog-clock"><script async defer id='20201221142749185' src='https://widgets.worldtimeserver.com/Public.ashx?rid=20201221142749185&theme=Digital&action=clock&wtsid=US-NY&hex=5a6ead&city=New York&size=large'></script></div>
+    </div>
+  </div>
+
+
+
 </div>
 
 <div id="Contact" class="tabcontent">
